@@ -17,7 +17,6 @@ export default function Hero() {
       <div className={styles.beamFlare} />
       <div className={styles.beam} />
       <div className={styles.beamGlow} />
-      <div className={styles.beamHorizon} />
 
       <div className={styles.content}>
         <div className={styles.badge}>
