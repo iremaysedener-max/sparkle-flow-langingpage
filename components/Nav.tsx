@@ -1,9 +1,13 @@
 "use client";
+import { useState } from "react";
 import styles from "./Nav.module.css";
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
   };
 
   return (
@@ -39,6 +43,24 @@ export default function Nav() {
         <button className={styles.cta} onClick={() => scrollTo("waitlist")}>
           Waitlist&apos;e Katıl
         </button>
+
+        <button
+          className={`${styles.hamburger} ${open ? styles.open : ""}`}
+          onClick={() => setOpen(!open)}
+          aria-label="Menüyü aç"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      <div className={`${styles.mobileMenu} ${open ? styles.open : ""}`}>
+        <button className={styles.mobileLink} onClick={() => scrollTo("features")}>Özellikler</button>
+        <button className={styles.mobileLink} onClick={() => scrollTo("how-it-works")}>Nasıl Çalışır</button>
+        <button className={styles.mobileLink} onClick={() => scrollTo("pricing")}>Paketler</button>
+        <button className={styles.mobileLink} onClick={() => scrollTo("waitlist")}>Waitlist</button>
+        <button className={styles.mobileCta} onClick={() => scrollTo("waitlist")}>Waitlist&apos;e Katıl</button>
       </div>
     </nav>
   );

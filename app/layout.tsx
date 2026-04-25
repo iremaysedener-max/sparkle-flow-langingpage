@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description: "İçerik üretmek, zamanlamak, yayınlamak — bunların hepsi sizin yerinize halloluyor.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr" className={`${bricolage.variable} ${bricolage.className}`}>

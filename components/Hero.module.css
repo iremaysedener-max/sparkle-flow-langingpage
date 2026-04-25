@@ -149,3 +149,15 @@
 .actAvatar { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; }
 .actLine { flex: 1; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.06); }
 .actBadge { font-size: 8px; border-radius: 4px; padding: 1px 5px; }
+
+@media (max-width: 768px) {
+  .hero { padding-top: 80px; }
+  .content { padding: 0 16px; }
+  .mockupWrap { padding: 0 16px; margin-top: 40px; }
+  .inputRow { max-width: 100%; }
+  .dashLayout { height: auto; flex-direction: column; }
+  .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; height: auto; padding: 10px; gap: 6px; }
+  .sidebarLogo { margin-bottom: 0; }
+  .dashMain { padding: 12px; }
+  .dashBottom { grid-template-columns: 1fr; }
+}

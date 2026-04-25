@@ -18,3 +18,7 @@
 .successIcon { font-size: 32px; margin-bottom: 16px; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800; }
 .success h3 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 10px; }
 .success p { font-size: 14px; color: var(--text2); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .section { padding: 80px 16px 100px; }
+}

@@ -32,3 +32,12 @@
 .miniCardDot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .miniCardLine { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.08); }
 .miniCardBadge { font-size: 8px; padding: 1px 6px; border-radius: 4px; font-weight: 600; }
+
+@media (max-width: 768px) {
+  .section { padding: 80px 16px; }
+  .grid { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
+  .card { height: auto; min-height: unset; }
+  .cardBody { padding: 20px 20px 14px; }
+  .cardMedia { height: auto; max-height: 180px; }
+  .miniDash { width: 90%; }
+}

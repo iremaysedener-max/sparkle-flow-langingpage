@@ -31,3 +31,13 @@
 .btn:hover { filter: brightness(1.1); transform: scale(1.01); }
 .btnPrimary { background: var(--grad-h); color: #fff; }
 .btnOutline { background: transparent; color: var(--text2); border: 1px solid var(--border2); }
+
+@media (max-width: 768px) {
+  .section { padding: 80px 16px; overflow: hidden; }
+  .inner { width: 100%; }
+  .grid { grid-template-columns: 1fr; gap: 16px; width: 100%; }
+  .card { width: 100%; max-width: none; min-width: unset; box-sizing: border-box; }
+  .featured { width: 100%; max-width: none; box-sizing: border-box; position: relative; }
+  .featuredInner { height: auto; box-sizing: border-box; }
+  .note { white-space: normal; text-align: center; display: block; }
+}
