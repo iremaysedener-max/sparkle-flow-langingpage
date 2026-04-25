@@ -1,0 +1,151 @@
+.hero {
+  position: relative; min-height: unset;
+  display: flex; flex-direction: column; align-items: center;
+  padding-top: 100px; overflow: hidden;
+}
+.beam {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 2px; height: 55%;
+  background: linear-gradient(180deg, transparent 0%, rgba(96,165,250,0.9) 15%, rgba(124,58,237,0.6) 50%, transparent 100%);
+  filter: blur(1px); z-index: 2; pointer-events: none;
+}
+.beamGlow {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 500px; height: 70%;
+  background: radial-gradient(ellipse 40% 100% at 50% 0%, rgba(96,165,250,0.22) 0%, rgba(124,58,237,0.12) 40%, transparent 70%);
+  z-index: 1; pointer-events: none;
+}
+.beamFlare {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(186,230,255,0.9) 0%, rgba(96,165,250,0.5) 30%, transparent 70%);
+  filter: blur(8px); z-index: 3; pointer-events: none; border-radius: 50%;
+}
+.beamHorizon {
+  position: absolute; top: 48%; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 300px;
+  background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(96,165,250,0.18) 0%, rgba(124,58,237,0.08) 50%, transparent 100%);
+  z-index: 1; pointer-events: none;
+}
+.content {
+  position: relative; z-index: 10;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; max-width: 760px; padding: 0 32px;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.02em;
+  color: var(--blue-bright);
+  background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25);
+  border-radius: 9999px; padding: 6px 16px; margin-bottom: 28px;
+}
+.badgeDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--blue-bright);
+  box-shadow: 0 0 8px rgba(96,165,250,0.8);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.title {
+  font-size: clamp(32px, 4.5vw, 64px); font-weight: 500;
+  line-height: 1.1; letter-spacing: -0.03em; color: #fff; margin-bottom: 20px;
+}
+.sub {
+  font-size: 16px; line-height: 1.7; color: var(--text2);
+  max-width: 480px; margin-bottom: 36px;
+}
+.inputRow {
+  display: flex; align-items: center;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border2);
+  border-radius: 9999px; padding: 6px 6px 6px 20px;
+  width: 100%; max-width: 420px; margin-bottom: 12px;
+  backdrop-filter: blur(10px);
+}
+.emailInput {
+  flex: 1; background: none; border: none; outline: none;
+  font-size: 14px; color: #fff;
+}
+.emailInput::placeholder { color: var(--text3); }
+.btnHero {
+  font-size: 14px; font-weight: 700; color: #fff;
+  background: var(--grad-h); border: none; border-radius: 9999px;
+  padding: 11px 24px; white-space: nowrap;
+  transition: filter 0.2s, transform 0.15s;
+}
+.btnHero:hover { filter: brightness(1.12); transform: scale(1.02); }
+.note { font-size: 12px; color: var(--text3); }
+
+/* Mockup */
+.mockupWrap {
+  position: relative; z-index: 10;
+  width: 100%; max-width: 1100px; margin: 64px auto 0; padding: 0 32px;
+}
+.mockupGlow {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 80%; height: 100%;
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(96,165,250,0.15) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+.mockupFrame {
+  position: relative; z-index: 1;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 40px 100px rgba(0,0,0,0.6), 0 0 80px rgba(96,165,250,0.06);
+}
+.chrome {
+  background: rgba(255,255,255,0.04); border-bottom: 1px solid var(--border);
+  padding: 10px 14px; display: flex; align-items: center; gap: 10px;
+}
+.chromeDots { display: flex; gap: 5px; }
+.chromeDot { width: 9px; height: 9px; border-radius: 50%; }
+.chromeBar {
+  flex: 1; height: 22px; background: rgba(255,255,255,0.06);
+  border-radius: 4px; max-width: 260px; margin: 0 auto;
+}
+.chromeBtn {
+  width: 56px; height: 22px; border-radius: 4px;
+  background: linear-gradient(90deg, rgba(124,58,237,0.6), rgba(59,130,246,0.6));
+}
+.dashLayout { display: flex; height: 340px; }
+.sidebar {
+  width: 150px; flex-shrink: 0;
+  background: rgba(0,0,0,0.3); border-right: 1px solid var(--border);
+  padding: 16px 10px; display: flex; flex-direction: column; gap: 4px;
+}
+.sidebarLogo { display: flex; align-items: center; gap: 6px; margin-bottom: 16px; padding: 0 4px; }
+.sidebarLogoDot { width: 18px; height: 18px; border-radius: 4px; background: var(--grad-h); }
+.sidebarLogoText { font-size: 11px; font-weight: 700; color: #fff; }
+.sidebarItem {
+  font-size: 11px; color: var(--text3);
+  padding: 6px 8px; border-radius: 6px;
+  display: flex; align-items: center; gap: 7px;
+}
+.sidebarItem.active { background: rgba(124,58,237,0.15); color: var(--blue-bright); }
+.sidebarDot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.dashMain { flex: 1; padding: 16px; overflow: hidden; }
+.statRow { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 12px; }
+.statCard {
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px; position: relative; overflow: hidden;
+}
+.statCard::before {
+  content: ''; position: absolute; top: 0; right: 0; left: 0; height: 2px;
+  background: var(--grad-h);
+}
+.statNum { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.03em; }
+.statLabel { font-size: 9px; color: var(--text3); margin-top: 2px; }
+.dashBottom { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.dashPanel {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px; overflow: hidden;
+}
+.panelTitle { font-size: 10px; font-weight: 600; color: var(--text2); margin-bottom: 8px; }
+.bars { display: flex; align-items: flex-end; gap: 4px; height: 60px; }
+.bar { flex: 1; border-radius: 3px 3px 0 0; }
+.actRow { display: flex; align-items: center; gap: 7px; margin-bottom: 6px; }
+.actAvatar { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; }
+.actLine { flex: 1; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+.actBadge { font-size: 8px; border-radius: 4px; padding: 1px 5px; }

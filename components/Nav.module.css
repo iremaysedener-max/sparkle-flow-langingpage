@@ -1,0 +1,37 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 64px;
+}
+.glass {
+  position: absolute; inset: 0;
+  background: rgba(4,9,18,0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.content {
+  position: relative; z-index: 1; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 9px; }
+.logoText { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+.logoText em { font-style: normal; font-weight: 300; color: var(--text2); }
+.center {
+  display: flex; align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 9999px; padding: 4px 6px; gap: 2px;
+}
+.link {
+  font-size: 13px; font-weight: 500; color: var(--text2);
+  background: none; border: none;
+  padding: 6px 16px; border-radius: 9999px;
+  transition: color 0.2s, background 0.2s;
+}
+.link:hover { color: #fff; background: rgba(255,255,255,0.06); }
+.cta {
+  font-size: 13px; font-weight: 600; color: #fff;
+  background: var(--grad-h); border: none; border-radius: 9999px;
+  padding: 9px 22px; transition: filter 0.2s;
+}
+.cta:hover { filter: brightness(1.1); }

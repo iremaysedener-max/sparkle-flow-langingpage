@@ -1,0 +1,14 @@
+.footer {
+  position: relative; z-index: 10;
+  border-top: 1px solid var(--border);
+  padding: 26px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 12px; color: var(--text3);
+}
+.left { display: flex; align-items: center; gap: 8px; }
+
+.contact { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.contactTitle { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; }
+.contactLinks { display: flex; gap: 12px; }
+.contactIcon { color: var(--text2); transition: color 0.2s; }
+.contactIcon:hover { color: #fff; }
