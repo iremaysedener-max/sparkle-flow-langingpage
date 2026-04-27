@@ -24,11 +24,11 @@ export default function Hero() {
           Yapay Zeka ile Sosyal Medya Otomasyonu
         </div>
         <h1 className={styles.title}>
-          Sosyal medyaya ayıracak<br />vaktiniz mi yok?
+          İşletmenizin sosyal medya içerik üretimini otomatik hale getirin
         </h1>
         <p className={styles.sub}>
-          İçerik üretmek, zamanlamak, yayınlamak — bunların hepsi tek tıkla halloluyor.
-          Siz sadece markanızı anlatın, gerisini Sparkle Flow yönetsin.
+          Küçük ekipler için tasarlandı. Sparkle Flow, işletmenizin marka sesini öğrenir, içerik üretir ve stratejik takviminizle uyumlu şekilde otomatik paylaşır.
+          İçerik üretmek, zamanlamak, yayınlamak; hepsi tek tıkla halloluyor.
         </p>
         <div className={styles.inputRow}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--text3)", flexShrink: 0, marginRight: 10 }}>

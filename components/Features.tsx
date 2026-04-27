@@ -26,8 +26,8 @@ export default function Features() {
                   <div className={styles.miniPill} style={{ width: "25%" }} />
                 </div>
                 <div className={styles.miniBars}>
-                  {[40,65,45,80,55,70].map((h, i) => (
-                    <div key={i} className={styles.miniBar} style={{ height: `${h}%`, background: i%2===0 ? "rgba(96,165,250,0.2)" : "linear-gradient(180deg,#7C3AED,#3B82F6)" }} />
+                  {[40, 65, 45, 80, 55, 70].map((h, i) => (
+                    <div key={i} className={styles.miniBar} style={{ height: `${h}%`, background: i % 2 === 0 ? "rgba(96,165,250,0.2)" : "linear-gradient(180deg,#7C3AED,#3B82F6)" }} />
                   ))}
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function Features() {
           <div className={styles.card}>
             <div className={styles.cardBody}>
               <div className={styles.cardTitle}>Rakip &amp; Marka Analizi</div>
-              <div className={styles.cardDesc}>Rakiplerinizi takip edin, markanızın sesini otomatik olarak öğrenin. Tek tıkla taze fikir üretin.</div>
+              <div className={styles.cardDesc}>Rakiplerinizi ve sektör trendlerini takip ederek sektörel rekabet avantajı sağlayın.</div>
             </div>
             <div className={styles.cardMedia} style={{ background: "rgba(0,0,0,0.3)" }}>
               <div className={styles.miniDash} style={{ width: "82%" }}>
