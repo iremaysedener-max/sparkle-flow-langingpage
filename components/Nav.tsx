@@ -15,21 +15,7 @@ export default function Nav() {
       <div className={styles.glass} />
       <div className={styles.content}>
         <a className={styles.logo} href="#">
-          <svg width="22" height="22" viewBox="0 0 40 40" fill="none">
-            <path d="M20 4 L22.5 16 L20 28 L17.5 16 Z" fill="url(#nl1)" />
-            <path d="M5 14 L17.5 16 L30 14 L17.5 12 Z" fill="url(#nl1)" />
-            <path d="M28 3 L30 10 L28 17 L26 10 Z" fill="url(#nl2)" opacity="0.65" />
-            <defs>
-              <linearGradient id="nl1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#A78BFA" />
-                <stop offset="100%" stopColor="#60A5FA" />
-              </linearGradient>
-              <linearGradient id="nl2" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#C4B5FD" />
-                <stop offset="100%" stopColor="#93C5FD" />
-              </linearGradient>
-            </defs>
-          </svg>
+          <img src="/logo.png" alt="Sparkle Flow" width={36} height={36} style={{ objectFit: "contain" }} />
           <span className={styles.logoText}>Sparkle<em> Flow</em></span>
         </a>
 
